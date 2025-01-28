@@ -1,0 +1,8 @@
+{
+    "sketch": "example.ino",
+    "board": "arduino:avr:nano",
+    "port": "/dev/ttyUSB1",
+    "output": "build",
+    "intelliSenseGen": "global",
+    "configuration": "cpu=atmega328old"
+}

@@ -1,0 +1,100 @@
+#:kivy 2.3.0
+
+BoxLayout:
+    orientation: 'horizontal'
+    padding: [0,20,20,20]
+    spacing: 30
+
+    BoxLayout:
+        id: box1
+        orientation:'vertical'
+        SpeedMeter:
+            id: meter_widget
+            min: 0
+            max: 60
+            value: 0
+            tick: 10
+            subtick: 2
+            start_angle: -135
+            end_angle: 135
+            label: "No Connection"
+            needle_color: '#ffffff'
+            shadow_color: '#888888'
+            sectors: [0, '#aa0000', 10, 'aaaa00', 20, '#00aa00', 40, '#0000aa', 60]
+            label_font_size: app.FONT_SIZE
+            value_font_size: app.FONT_SIZE/2
+            sector_width: 40
+        Button:
+            id: btn_connect
+            text: 'Connect'
+            font_size: app.FONT_SIZE
+            size_hint: 0.5, 0.25
+            pos_hint: {'x': .25}
+            on_press: app.connect(self)
+    
+    BoxLayout:
+        orientation: 'vertical'
+        spacing: 20
+        #canvas.before:
+        #    Color:
+        #        rgba: 1, 0, 0, 0.1  # Red color
+        #    Rectangle: 
+        #        pos: self.pos
+        #        size: self.size
+
+        ToggleButton:
+            id: btn_light
+            size_hint: 0.75, .5
+            pos_hint: {'center_x': .5}
+            text: "Torch"
+            font_size: app.FONT_SIZE
+            on_press: app.on_torch_btn(self)
+
+        BoxLayout:
+            orientation: 'horizontal'
+            Label:
+                id: lbl_brightness
+                size_hint_x: 0.3
+                #font_size: app.FONT_SIZE
+                text: "Brightness"
+
+            Slider:
+                id: sldr_brightness
+                min: 0
+                max: 255
+                value: 128
+                step: 5
+                value_track: True
+                value_track_color: 0, 1, 0, 1
+                orientation: 'horizontal'
+                on_value: app.on_brt_sldr(self)
+
+        Slider:
+            id: sldr_angle
+            min: -10
+            max:10
+            size_hint_y: 0.5
+            canvas.before:
+                #Color:
+                #    rgba: 1, 0, 1, 0.5  # Magenta
+                #Rectangle: 
+                #    pos: self.pos
+                #    size: self.size
+                Color:
+                    rgba: 0, 1, 1, 1  # Red color
+                Triangle:
+                    points: [self.center_x - self.width / 10, self.y, self.center_x, self.y + self.height/2.1, self.center_x + self.width / 10, self.y]
+
+        Label:
+            id: lbl_angle
+            font_size: app.FONT_SIZE #self.texture_size
+            size_hint_y: 0.3
+            text: "angle"
+        
+                
+
+
+
+
+        
+
