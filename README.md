@@ -9,7 +9,17 @@ This step-by-step guide is specific to Linux systems and has been tested on Ubun
 
 ## Setting up the Serial Server on the Phone
 
-The example app cannot access the USB interface of the phone directly. Instead, it communicates over a TCP socket. This is provided by the TCPUART Transparent Bridge app. (Or similar)
+The examYou can update the original file by copying the edited content and pasting it into the README.md file in your repository. Here are the steps:
+
+1. Go to the [README.md file](https://github.com/michalin/androidino/edit/main/README.md) in your repository.
+2. Click on the pencil icon to edit the file.
+3. Replace the existing content with the updated content.
+4. Scroll down to the "Commit changes" section.
+5. Add a commit message summarizing the changes.
+6. Choose "Commit directly to the main branch".
+7. Click on "Commit changes".
+
+This will update the README.md file with the corrected content.ple app cannot access the USB interface of the phone directly. Instead, it communicates over a TCP socket. This is provided by the TCPUART Transparent Bridge app. (Or similar)
 
 - Install the [TCPUART transparent Bridge](https://play.google.com/store/apps/details?id=com.hardcodedjoy.tcpuart&pcampaignid=web_share) on your phone.  
 - Connect the phone and the Arduino with the USB-OTG cable  
@@ -33,7 +43,7 @@ sudo apt install -y python-is-python3 python3-pip python3-venv
 If you are on WSL (Deban) wihout GUI, install these additional packages:
 
 ```bash
-sudo apt install -y libmtdev-dev ligl.dev
+sudo apt install -y libmtdev-dev ligl-dev
 ```
 
 It's highly recommended to install the required Python packages in a virtual environment:
