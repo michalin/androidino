@@ -212,7 +212,7 @@ buildozer android debug deploy run
 
 ## Debugging  
 
-To show debug messages in the terminal, just type
+To rebuild the app and show debug messages in the terminal, just type
 
 ```bash
 buildozer android debug deploy run logcat | grep python
